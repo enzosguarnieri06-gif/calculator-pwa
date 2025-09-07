@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="description" content="Calculadora PWA - Funciona offline">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    
+    <title>Calculadora PWA</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <h1>🧮 Calculadora PWA</h1>
+                <div class="status-indicator">
+                    <div id="online-status" class="status online">Online</div>
+                </div>
+            </div>
+            
+            <div class="display">
+                <div id="previous-operand" class="previous-operand"></div>
+                <div id="current-operand" class="current-operand">0</div>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn btn-clear" data-clear>AC</button>
+                <button class="btn btn-delete" data-delete>⌫</button>
+                <button class="btn btn-operation" data-operation="/">÷</button>
+                <button class="btn btn-operation" data-operation="*">×</button>
+                
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operation" data-operation="-">−</button>
+                
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operation" data-operation="+">+</button>
+                
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-equals span-2" data-equals>=</button>
+                
+                <button class="btn btn-number span-2" data-number="0">0</button>
+                <button class="btn btn-number" data-number=".">.</button>
+            </div>
+        </div>
+        
+        <div class="install-prompt" id="install-prompt" style="display: none;">
+            <div class="install-content">
+                <h3>Instalar Calculadora</h3>
+                <p>Adicione este app à sua tela inicial para acesso rápido!</p>
+                <button id="install-button" class="btn btn-install">Instalar App</button>
+                <button id="dismiss-install" class="btn btn-secondary">Mais tarde</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
