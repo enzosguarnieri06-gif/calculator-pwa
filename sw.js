@@ -11,7 +11,7 @@ const FILES_TO_CACHE = [
 ];
 
 self.addEventListener('install', (event) => {
-  console.log "service-worker instalado" 
+  console.log ("service-worker instalado") 
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(FILES_TO_CACHE);
@@ -41,3 +41,4 @@ self.addEventListener('fetch', (event) => {
   );
 
 });
+
